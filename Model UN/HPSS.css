@@ -1,15 +1,81 @@
 html, body{
     margin: 0%;
     margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 0%;
+    box-sizing: border-box;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
-
+/* background (does not scroll furthur than the screen, it turns white and the radial gradient is lost.) */
 .box{
-    background:rgb(74, 174, 255);
+    background:rgb(26, 133, 255);
     width:100%;
     height:100%;
     position: absolute;
     margin: 0%;
-    background-image: radial-gradient(rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0.486));
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.233));}
+
+    /* optional container to create a black transparent bar around things. (unused for anything currently, safe to delete. (DELETE THIS FUCKING COMMENT IF YOU USED IT SO THAT NO ONE ELSE 
+    DELETES IT AND FUCKS UP THE CODE)) */
+.container{
+    background-color: rgba(2, 50, 95, 0.267);
+    margin-top: 0%;
+}
+
+/* button's style */
+.btn{
+    width: 150px;
+    height: 130px;
+    margin-left: 25px;
+    background-image: linear-gradient(rgba(68, 171, 255, 0.685), rgba(61, 216, 243, 0.651));
+    cursor: pointer;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight:500;
+    color:white;
+    text-shadow:-1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000,  
+    -2px 0 0 #000000,
+    2px 0 0 #000000,
+    0 2px 0 #000000,
+    0 -2px 0 #000000;;
+}
+
+/* all nav things are for the black bar on top that arranges the buttons and title */
+nav{
+    width:100%;
+    height: fit content;
+    line-height: 75px;
+    margin: 0%;
+    position: fixed;
+    background-image: linear-gradient(hwb(0 0% 100% / 0.308), rgba(0, 0, 0, 0.308));
+}
+nav .BigT{
+    float: left;
+    margin-top: 45px;
+}
+nav ul{
+    float: right;
+    margin-top: 45px;
+}
+nav li{
+    display: inline-block;
+    list-style: none;
+}
+
+/* change style when hover over ANY button*/
+.btn:hover{
+    background-image: linear-gradient(rgb(68, 211, 255), rgba(61, 185, 243, 0.877));
+    transition: all 0.4s ease 1s;
+}
+
+/* same thing but for when ANY button is clicked */
+.btn:active{
+    background-image: linear-gradient(rgb(35, 103, 124), rgba(28, 83, 109, 0.877));
+    transition: all 0.4s ease 1s;
 }
